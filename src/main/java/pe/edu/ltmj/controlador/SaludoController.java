@@ -16,7 +16,7 @@ public class SaludoController {
 
 	@GetMapping
 	public ResponseEntity<Map<String, String>> saludar(@RequestParam String nombre) {
-		String nombreReal = Optional.ofNullable(nombre).orElse("persona bonita");
+		String nombreReal = Optional.ofNullable(nombre).orElse("persona fea");
 		Map<String, String> mapa = new HashMap<>();
 		mapa.put("saludo", "Hola " + nombreReal);
 		return ResponseEntity.ok(mapa);
